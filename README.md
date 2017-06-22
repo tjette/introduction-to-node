@@ -62,3 +62,13 @@ app.get('/greeting', function(req,res){
   res.send("Woohoo you found the greeting endpoint!");
 })
 ```
+
+##Adding params using express
+
+```js
+app.get('/greeting/:name', function(req, res){
+  var yourName = req.params.name;
+  var message = "Nice to meet you " + yourName;
+  res.json({msg: message});
+})
+```
