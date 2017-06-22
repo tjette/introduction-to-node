@@ -12,8 +12,10 @@ towards the end functionality.
 npm stands for node package manager. Its just a tool that allows us to easily
 access the node module ecosystem and add them to our project.
 
+Example node_module: Moment.js
+
 Every node app has a package.json, which is the master file that keeps track of
 all node modules your project cares about.
 
 To add a 'package.json' to your project, run the command 'npm init', and accept
-all defaults. 
+all defaults.
