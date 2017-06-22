@@ -26,7 +26,7 @@ We used the node module HTTP to build a simple web server, that we can then run
 and connect to using the web address: 'http://localhost:3000/'
 to run the server use the command 'node index.js'
 
-'''js
+```js
 var http = require("http");
 
 http.createServer(function(request, response){
@@ -35,4 +35,30 @@ http.createServer(function(request, response){
 }).listen(3000, function(){
   console.log("app is listening on port 3000!")
 });
-'''
+```
+
+### Express Web server
+[Express API](http://expressjs.com/)
+To add express node module to our application:
+'npm install --save express'
+to ensure it was added successfully, check your 'package.json' for:
+```js
+"dependencies": {
+  "express": "^4.15.3"
+}
+```
+This also gives us a ton of code we do not care to track in our Github, in the `node_modules` folder.
+To ignore this code:
+`touch .gitignore`
+add `node_modules/`to `.gitignore`
+
+
+__express server__
+
+This is how you hit an endpint using Express
+
+```js
+app.get('/greeting', function(req,res){
+  res.send("Woohoo you found the greeting endpoint!");
+})
+```
