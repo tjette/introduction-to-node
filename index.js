@@ -1,6 +1,10 @@
 
 var express = require('express');
+var bodyParser = require('body-parser');
 var app = express();
+
+app.use(bodyParser.json());
+app.use(bodyParser.urlencoded({extended:true}));
 
 app.get('/greeting', function(req,res){
   res.send("Woohoo you found the greeting endpoint!");
@@ -20,6 +24,23 @@ app.get('/color/:colorName', function(req, res){
 
 app.get('/salutations', function(req,res){
   res.send("salutations!");
+})
+
+app.post('/products', function(req, res){
+  var name = req.body.name;
+  var color = req.body.color ;
+  var price = req.body.price;
+  var product = {name: name, color: color, price: price};
+  res.json(product);
+})
+
+app.post('/basketball', function(req,res){
+  var name = req.body.name;
+  var position = req.body.position;
+  var team = req.body.team;
+
+  var player = {name: name, position: position, team:team};
+  res.json(player);
 })
 
 app.listen(3000, function(){
