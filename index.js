@@ -8,7 +8,11 @@ app.use(bodyParser.urlencoded({extended:true}));
 
 app.get('/instagrams', function(req,res){
   res.send("Hi");
-})
+});
+
+app.post('/instagrams', function(req,res){
+  res.send("Hello from post!");
+});
 
 
 
