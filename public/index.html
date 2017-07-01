@@ -13,14 +13,15 @@
 
   </head>
   <body>
+<div class="" id="insta">
 <div class="" id="app">
+
 <div class="jumbotron">
   <h1>Instagram</h1>
   <p>World's second largest collection of dog photos</p>
 
 </div>
-
-<div class="">
+<div class="formContainer">
   <form v-on:submit.prevent="submitInstagram">
     <div class="form-group">
       <label for="">Title</label>
@@ -37,6 +38,8 @@
   <h1>{{i.title}}</h1>
   <img :src="i.img" class="dog-image" />
   <p>{{i.date}}</p>
+</div>
+
 </div>
 </div>
 
